@@ -25,5 +25,26 @@
 
     </div>
     </form>
+
+    <?php
+        include "config.php";
+        $rawData = mysqli_query($con , "select * from tbltodo")
+    ?>
+
+    <div class="container">
+        <div class="col-8 bg-white m-auto mt-3">
+
+        
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>demo</td>
+                <td style="width:10%"><a href="delete.php" class="btn btn-outline-danger">Delete</a></td>
+                <td style="width:10%"><a href="" class="btn btn-outline-success">Update</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
 </body>
 </html>
