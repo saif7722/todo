@@ -37,12 +37,20 @@
         
     <table class="table">
         <tbody>
+            <?php
+                while($row = mysqli_fetch_array($rawData)){
+            ?>
             <tr>
-                <td>demo</td>
+                <td><?php echo $row['id'] ?></td>
+                <td><?php echo $row['list'] ?></td>
                 <td style="width:10%"><a href="delete.php" class="btn btn-outline-danger">Delete</a></td>
                 <td style="width:10%"><a href="" class="btn btn-outline-success">Update</a></td>
             </tr>
+            <?php
+                }
+            ?>
         </tbody>
+        
     </table>
     </div>
     </div>
